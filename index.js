@@ -3,12 +3,15 @@
 // Create a function to add a new book to the collection, with title and author.
 
 import {
+  DateTime,
+} from './date.js';
+
+import {
   Methods, booksSection, addBook,
 } from './modules/methods.js';
 import {
   contactSec, fieldAddSec, displayBookSec, vieContact, viewAddBook, viewBooks,
 } from './modules/singlePage.js';
-import date from './modules/date.js';
 
 booksSection.addEventListener('click', (e) => {
   Methods.argument(e);
@@ -39,4 +42,15 @@ vieContact.addEventListener('click', () => {
   displayBookSec.style.display = 'none';
 });
 
-date();
+function time() {
+  const siteDate = document.querySelector('#date');
+  siteDate.textContent = DateTime.now().toLocaleString({
+    month: 'long',
+    day: 'numeric',
+    year: 'numeric',
+    hour: 'numeric',
+    minute: '2-digit',
+  });
+}
+
+setInterval(time, 1000);
