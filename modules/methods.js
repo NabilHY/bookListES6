@@ -1,8 +1,8 @@
+/* eslint-disable no-undef */
 const booksSection = document.querySelector('.container');
 const addBook = document.querySelector('.add-btn');
 const titleValue = document.getElementById('title');
 const authorValue = document.getElementById('author');
-
 
 class Methods {
   constructor(title, author) {
@@ -101,4 +101,6 @@ class Methods {
   }
 }
 
-export { Methods ,authorValue,titleValue,addBook,booksSection };
+export {
+  Methods, authorValue, titleValue, addBook, booksSection,
+};

@@ -2,20 +2,22 @@
 /* eslint-disable max-classes-per-file */
 // Create a function to add a new book to the collection, with title and author.
 
-import { Methods ,booksSection,addBook,titleValue,authorValue } from './modules/methods.js'
-import { contactSec, fieldAddSec, displayBookSec, vieContact, viewAddBook, viewBooks} from './modules/singlePage.js'
-
-
+import {
+  Methods, booksSection, addBook,
+} from './modules/methods.js';
+import {
+  contactSec, fieldAddSec, displayBookSec, vieContact, viewAddBook, viewBooks,
+} from './modules/singlePage.js';
+import date from './modules/date.js';
 
 booksSection.addEventListener('click', (e) => {
-  Methods.argument(e)
+  Methods.argument(e);
 });
 
 window.addEventListener('DOMContentLoaded', Methods.addLS);
 addBook.addEventListener('click', (e) => {
-Methods.check(e);
+  Methods.check(e);
 });
-
 
 // add event listners
 viewBooks.addEventListener('click', () => {
@@ -36,3 +38,5 @@ vieContact.addEventListener('click', () => {
   fieldAddSec.style.display = 'none';
   displayBookSec.style.display = 'none';
 });
+
+date();
